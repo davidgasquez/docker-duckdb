@@ -1,2 +1,9 @@
-# docker-duckdb
-Small docker image with DuckDB
+# DuckDB Docker Image
+
+Small docker image with DuckDB!
+
+## Usage
+
+```bash
+docker run -it --rm davidgasquez/duckdb duckdb
+```
