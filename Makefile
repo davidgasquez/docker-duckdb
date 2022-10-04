@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := run
 
-DUCK_DB_VERSION=v0.5.0
+DUCK_DB_VERSION=v0.5.1
 IMAGE_NAME := davidgasquez/duckdb:$(DUCK_DB_VERSION)
 LATEST_IMAGE_NAME := davidgasquez/duckdb:latest
 
@@ -10,6 +10,6 @@ build:
 run:
 	@docker run --rm -it $(IMAGE_NAME) duckdb
 
-push:
+push: build
 	docker push $(IMAGE_NAME)
 	docker push $(LATEST_IMAGE_NAME)
