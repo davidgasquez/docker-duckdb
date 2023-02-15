@@ -1,11 +1,11 @@
 .DEFAULT_GOAL := run
 
-DUCK_DB_VERSION=v0.6.1
-IMAGE_NAME := davidgasquez/duckdb:$(DUCK_DB_VERSION)
+DUCKDB_VERSION=v0.7.0
+IMAGE_NAME := davidgasquez/duckdb:$(DUCKDB_VERSION)
 LATEST_IMAGE_NAME := davidgasquez/duckdb:latest
 
 build:
-	@docker build --build-arg DUCK_DB_VERSION=$(DUCK_DB_VERSION) -t $(IMAGE_NAME) -t $(LATEST_IMAGE_NAME) .
+	@docker build --build-arg DUCKDB_VERSION=$(DUCKDB_VERSION) -t $(IMAGE_NAME) -t $(LATEST_IMAGE_NAME) .
 
 run:
 	@docker run --rm -it $(IMAGE_NAME) duckdb
