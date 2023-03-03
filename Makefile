@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := run
 
-DUCKDB_VERSION=v0.7.0
+DUCKDB_VERSION=v0.7.1
 IMAGE_NAME := davidgasquez/duckdb:$(DUCKDB_VERSION)
 LATEST_IMAGE_NAME := davidgasquez/duckdb:latest
 
